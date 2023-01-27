@@ -1,41 +1,36 @@
 import React from 'react';
+import Directory from './Directory/Directory';
 
 const App = () => {
   const categories = [
     {
-      title: 'Hats',
       id: 1,
+      title: 'hats',
+      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
     },
     {
-      title: 'Jackets',
       id: 2,
+      title: 'jackets',
+      imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
     },
     {
-      title: 'Sneakers',
       id: 3,
+      title: 'sneakers',
+      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
     },
     {
-      title: 'Womens',
       id: 4,
+      title: 'womens',
+      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
     },
     {
-      title: 'Mens',
       id: 5,
+      title: 'mens',
+      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
     },
   ];
-  return (
-    <div className='categories-container'>
-      {categories.map(({ title, id }) => (
-        <div className='category-container' key={id}>
-          <div className='background-image' />
-          <div className='category-body-container'>
-            <h2>{title}</h2>
-            <p>Shop Now</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+
+  return <Directory categories={categories} />;
 };
 
 export default App;
